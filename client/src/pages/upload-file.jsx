@@ -47,6 +47,7 @@ const UpLoadFile = () => {
             });
           }
         });
+
         // In dữ liệu ra console
         console.log(jsonData);
 
@@ -62,10 +63,83 @@ const UpLoadFile = () => {
     },
   };
 
-  const columns =
-    tableData.length > 0
-      ? Object.keys(tableData[0]).map((key) => ({ title: key, dataIndex: key }))
-      : [];
+  const columns = [
+    {
+      title: "STT",
+      dataIndex: "stt",
+      key: "stt",
+    },
+    {
+      title: "Mã MH",
+      dataIndex: "maMh",
+      key: "maMh",
+    },
+    {
+      title: "Tên MH",
+      dataIndex: "tenMh",
+      key: "tenMh",
+    },
+    {
+      title: "Số TC",
+      dataIndex: "soTc",
+      key: "soTc",
+    },
+    {
+      title: "Sĩ số",
+      dataIndex: "siSo",
+      key: "siSo",
+    },
+    {
+      title: "Ho và tên",
+      dataIndex: "hoVaTen",
+      key: "hoVaTen",
+    },
+    {
+      title: "Mã viên chức",
+      dataIndex: "maVienChuc",
+      key: "maVienChuc",
+    },
+    {
+      title: "Nhóm",
+      dataIndex: "nhom",
+      key: "nhom",
+    },
+    {
+      title: "Tổ thực hành",
+      dataIndex: "toTH",
+      key: "toTH",
+    },
+    {
+      title: "Thứ",
+      dataIndex: "thu",
+      key: "thu",
+    },
+    {
+      title: "Tiết BĐ",
+      dataIndex: "tietBd",
+      key: "tietBd",
+    },
+    {
+      title: "Số tiết",
+      dataIndex: "soTiet",
+      key: "soTiet",
+    },
+    {
+      title: "Mã phòng",
+      dataIndex: "maPhong",
+      key: "maPhong",
+    },
+    {
+      title: "Tên lớp",
+      dataIndex: "tenLop",
+      key: "tenLop",
+    },
+    {
+      title: "Tuần hoc",
+      dataIndex: "tuanHoc",
+      key: "tuanHoc",
+    },
+  ];
 
   return (
     <div>
