@@ -25,10 +25,9 @@ const UpLoadFile = () => {
         // Chuyển đổi dữ liệu từ worksheet thành mảng đối tượng
         const jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
 
-        jsonData.forEach((item, index) => {
+        jsonData.forEach((item) => {
           if (!isNaN(item[0])) {
             result.push({
-              key: index,
               stt: item[0],
               maMh: item[1],
               tenMh: item[2],

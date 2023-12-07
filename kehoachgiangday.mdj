@@ -4,25 +4,6 @@
 	"name": "Untitled",
 	"ownedElements": [
 		{
-			"_type": "UMLModel",
-			"_id": "AAAAAAFF+qBWK6M3Z8Y=",
-			"_parent": {
-				"$ref": "AAAAAAFF+h6SjaM2Hec="
-			},
-			"name": "Model",
-			"ownedElements": [
-				{
-					"_type": "UMLClassDiagram",
-					"_id": "AAAAAAFF+qBtyKM79qY=",
-					"_parent": {
-						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
-					},
-					"name": "Main",
-					"defaultDiagram": true
-				}
-			]
-		},
-		{
 			"_type": "ERDDataModel",
 			"_id": "AAAAAAGMPHjnS4vNeBg=",
 			"_parent": {
@@ -55,7 +36,7 @@
 										"$ref": "AAAAAAGMPHjueIvUSDI="
 									},
 									"font": "Arial;13;1",
-									"left": 80,
+									"left": 168,
 									"top": 125,
 									"width": 146.05419921875,
 									"height": 13,
@@ -81,7 +62,7 @@
 												"$ref": "AAAAAAGMPHo0vovh7T0="
 											},
 											"font": "Arial;13;0",
-											"left": 85,
+											"left": 173,
 											"top": 148,
 											"width": 136.05419921875,
 											"height": 13
@@ -96,21 +77,21 @@
 												"$ref": "AAAAAAGMPHpCYIvozYU="
 											},
 											"font": "Arial;13;0",
-											"left": 85,
+											"left": 173,
 											"top": 163,
 											"width": 136.05419921875,
 											"height": 13
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 80,
+									"left": 168,
 									"top": 143,
 									"width": 146.05419921875,
 									"height": 38
 								}
 							],
 							"font": "Arial;13;0",
-							"left": 80,
+							"left": 168,
 							"top": 120,
 							"width": 146.05419921875,
 							"height": 61,
@@ -252,7 +233,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 320,
+									"left": 364,
 									"top": 129,
 									"height": 13,
 									"alpha": 1.5707963267948966,
@@ -269,7 +250,7 @@
 										"$ref": "AAAAAAGMPH3LTIwl0Sk="
 									},
 									"font": "Arial;13;0",
-									"left": 250,
+									"left": 338,
 									"top": 129,
 									"height": 13,
 									"alpha": 0.5235987755982988,
@@ -304,7 +285,7 @@
 								"$ref": "AAAAAAGMPHjueIvUSDI="
 							},
 							"lineStyle": 2,
-							"points": "225:150;416:150",
+							"points": "313:150;416:150",
 							"nameLabel": {
 								"$ref": "AAAAAAGMPH3LTIwmEbU="
 							},
@@ -1075,6 +1056,120 @@
 							"headNameLabel": {
 								"$ref": "AAAAAAGMPJkPwY1mWaQ="
 							}
+						},
+						{
+							"_type": "UMLTextView",
+							"_id": "AAAAAAGMPlUuxD2n13U=",
+							"_parent": {
+								"$ref": "AAAAAAGMPHjnS4vOHRI="
+							},
+							"font": "Arial;13;0",
+							"left": 200,
+							"top": 88,
+							"width": 89,
+							"height": 25,
+							"text": "Các khoa"
+						},
+						{
+							"_type": "UMLTextView",
+							"_id": "AAAAAAGMPlVnYD2uc20=",
+							"_parent": {
+								"$ref": "AAAAAAGMPHjnS4vOHRI="
+							},
+							"font": "Arial;13;0",
+							"left": 488,
+							"top": 80,
+							"width": 81,
+							"height": 25,
+							"text": "Môn học"
+						},
+						{
+							"_type": "UMLTextView",
+							"_id": "AAAAAAGMPlXpoD21BFQ=",
+							"_parent": {
+								"$ref": "AAAAAAGMPHjnS4vOHRI="
+							},
+							"font": "Arial;13;0",
+							"left": 552,
+							"top": 360,
+							"width": 60,
+							"height": 25,
+							"text": "Nhóm"
+						},
+						{
+							"_type": "UMLTextView",
+							"_id": "AAAAAAGMPlZVrj252uk=",
+							"_parent": {
+								"$ref": "AAAAAAGMPHjnS4vOHRI="
+							},
+							"font": "Arial;13;0",
+							"left": 832,
+							"top": 80,
+							"width": 97,
+							"height": 25,
+							"text": "Giảng viên"
+						},
+						{
+							"_type": "UMLTextView",
+							"_id": "AAAAAAGMPlbjeD3A8Mw=",
+							"_parent": {
+								"$ref": "AAAAAAGMPHjnS4vOHRI="
+							},
+							"font": "Arial;13;0",
+							"left": 896,
+							"top": 232,
+							"width": 60,
+							"height": 15
+						},
+						{
+							"_type": "UMLTextView",
+							"_id": "AAAAAAGMPlb8ID3DKzA=",
+							"_parent": {
+								"$ref": "AAAAAAGMPHjnS4vOHRI="
+							},
+							"font": "Arial;13;0",
+							"left": 888,
+							"top": 256,
+							"width": 60,
+							"height": 15
+						},
+						{
+							"_type": "UMLTextView",
+							"_id": "AAAAAAGMPlfTKj3GAhE=",
+							"_parent": {
+								"$ref": "AAAAAAGMPHjnS4vOHRI="
+							},
+							"font": "Arial;13;0",
+							"left": 872,
+							"top": 248,
+							"width": 113,
+							"height": 25,
+							"text": "Phiên giảng viên"
+						},
+						{
+							"_type": "UMLTextView",
+							"_id": "AAAAAAGMPlhTNj3Q7wY=",
+							"_parent": {
+								"$ref": "AAAAAAGMPHjnS4vOHRI="
+							},
+							"font": "Arial;13;0",
+							"left": 928,
+							"top": 432,
+							"width": 60,
+							"height": 15
+						},
+						{
+							"_type": "UMLTextView",
+							"_id": "AAAAAAGMPliULT3TLe4=",
+							"_parent": {
+								"$ref": "AAAAAAGMPHjnS4vOHRI="
+							},
+							"font": "Arial;13;0",
+							"left": 872,
+							"top": 432,
+							"width": 137,
+							"height": 25,
+							"text": "Thời gian biểu nhóm"
 						}
 					]
 				},
@@ -1536,6 +1631,14 @@
 							"foreignKey": true
 						}
 					]
+				},
+				{
+					"_type": "ERDEntity",
+					"_id": "AAAAAAGMP8+ge2iNPxc=",
+					"_parent": {
+						"$ref": "AAAAAAGMPHjnS4vNeBg="
+					},
+					"name": "Entity1"
 				}
 			]
 		}
