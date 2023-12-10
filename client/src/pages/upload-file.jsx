@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { InboxOutlined } from "@ant-design/icons";
-import { Upload, Table } from "antd";
+import { Upload } from "antd";
 import * as XLSX from "xlsx";
+import { refactorData } from "../utils/refactorData";
 
 const { Dragger } = Upload;
 
@@ -25,8 +26,15 @@ const UpLoadFile = () => {
         // Chuyển đổi dữ liệu từ worksheet thành mảng đối tượng
         const jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
 
-        jsonData.forEach((item) => {
+        console.log(jsonData);
+
+        for (let i = 0; i < jsonData.length; i++) {
+          const item = jsonData[i];
           if (!isNaN(item[0])) {
+            item[1] = item[1] ?? jsonData[i - 1][1];
+            item[2] = item[2] ?? jsonData[i - 1][2];
+            item[7] = item[7] ?? jsonData[i - 1][7];
+
             result.push({
               stt: item[0],
               maMh: item[1],
@@ -34,21 +42,21 @@ const UpLoadFile = () => {
               soTc: item[3],
               siSo: item[4],
               hoVaTen: item[5],
-              maVienChuc: item[7],
-              nhom: item[8],
-              toTH: item[9],
-              thu: item[10],
-              tietBd: item[11],
-              soTiet: item[12],
-              maPhong: item[13],
-              tenLop: item[14],
-              tuanHoc: item[15],
+              maVienChuc: item[6],
+              nhom: item[7],
+              toTH: item[8],
+              thu: item[9],
+              tietBd: item[10],
+              soTiet: item[11],
+              maPhong: item[12],
+              tenLop: item[13],
+              tuanHoc: item[14],
             });
           }
-        });
+        }
 
         // In dữ liệu ra console
-        console.log(jsonData);
+        console.log(result);
 
         // Lưu dữ liệu vào state để hiển thị trên bảng
         setTableData(result);
@@ -62,83 +70,9 @@ const UpLoadFile = () => {
     },
   };
 
-  const columns = [
-    {
-      title: "STT",
-      dataIndex: "stt",
-      key: "stt",
-    },
-    {
-      title: "Mã MH",
-      dataIndex: "maMh",
-      key: "maMh",
-    },
-    {
-      title: "Tên MH",
-      dataIndex: "tenMh",
-      key: "tenMh",
-    },
-    {
-      title: "Số TC",
-      dataIndex: "soTc",
-      key: "soTc",
-    },
-    {
-      title: "Sĩ số",
-      dataIndex: "siSo",
-      key: "siSo",
-    },
-    {
-      title: "Ho và tên",
-      dataIndex: "hoVaTen",
-      key: "hoVaTen",
-    },
-    {
-      title: "Mã viên chức",
-      dataIndex: "maVienChuc",
-      key: "maVienChuc",
-    },
-    {
-      title: "Nhóm",
-      dataIndex: "nhom",
-      key: "nhom",
-    },
-    {
-      title: "Tổ thực hành",
-      dataIndex: "toTH",
-      key: "toTH",
-    },
-    {
-      title: "Thứ",
-      dataIndex: "thu",
-      key: "thu",
-    },
-    {
-      title: "Tiết BĐ",
-      dataIndex: "tietBd",
-      key: "tietBd",
-    },
-    {
-      title: "Số tiết",
-      dataIndex: "soTiet",
-      key: "soTiet",
-    },
-    {
-      title: "Mã phòng",
-      dataIndex: "maPhong",
-      key: "maPhong",
-    },
-    {
-      title: "Tên lớp",
-      dataIndex: "tenLop",
-      key: "tenLop",
-    },
-    {
-      title: "Tuần hoc",
-      dataIndex: "tuanHoc",
-      key: "tuanHoc",
-    },
-  ];
+  if (tableData.length > 0) {
+    console.log(refactorData(tableData));
+  }
 
   return (
     <div>
@@ -154,9 +88,6 @@ const UpLoadFile = () => {
           uploading company data or other banned files.
         </p>
       </Dragger>
-      {tableData.length > 0 && (
-        <Table dataSource={tableData} columns={columns} />
-      )}
     </div>
   );
 };
